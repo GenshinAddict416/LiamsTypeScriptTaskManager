@@ -32,8 +32,8 @@ class FileStorage<T extends { id: number }> {
 }
 
 const app = express();
-app.use(cors()); // Allows your UI to talk to this server
-app.use(express.json()); // Parses incoming JSON data
+app.use(cors());
+app.use(express.json());
 
 // ROUTE: Serve the static UI HTML file
 app.use(express.static(process.cwd())); 
